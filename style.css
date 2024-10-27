@@ -30,18 +30,17 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-align: center; /* Garante que o título fique centralizado */
+  text-align: center;
 }
 
 /* Estilo das Cartas */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Responsivo */
+  grid-template-columns: repeat(5, 1fr); /* 5 cartas por fila */
   gap: 1em;
   justify-items: center;
 }
 
-/* Cartas individuais */
 .card {
   width: 100px;
   height: 140px;
@@ -81,4 +80,25 @@ h1 {
 .card-back {
   background-color: #1c2a44; /* Azul mais escuro para o verso */
   transform: rotateY(180deg);
- 
+  font-style: italic;
+  font-size: 0.8em; /* Fonte menor para o haiku */
+  padding: 10px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr); /* 3 cartas por fila para mais compactação */
+    gap: 0.5em;
+  }
+  .card {
+    width: 80px;
+    height: 110px;
+  }
+}
