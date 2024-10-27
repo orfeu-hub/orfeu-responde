@@ -13,6 +13,7 @@ body {
   height: 100vh;
   background: #1e1e1e;
   color: #f5f5f5;
+  margin: 0;
 }
 
 .container {
@@ -34,11 +35,12 @@ h1 {
 /* Estilo das Cartas */
 .cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 cartas por fila */
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Responsivo */
   gap: 1em;
   justify-items: center;
 }
 
+/* Cartas individuais */
 .card {
   width: 100px;
   height: 140px;
@@ -83,4 +85,15 @@ h1 {
   padding: 10px;
   text-align: center;
   line-height: 1.4;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em; /* Reduz o tamanho do título em telas menores */
+  }
+  .card {
+    width: 80px;
+    height: 120px;
+  }
 }
