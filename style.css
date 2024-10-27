@@ -30,6 +30,7 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center; /* Garante que o título fique centralizado */
 }
 
 /* Estilo das Cartas */
@@ -80,20 +81,4 @@ h1 {
 .card-back {
   background-color: #1c2a44; /* Azul mais escuro para o verso */
   transform: rotateY(180deg);
-  font-style: italic;
-  font-size: 0.8em; /* Fonte menor para o haiku */
-  padding: 10px;
-  text-align: center;
-  line-height: 1.4;
-}
-
-/* Estilos para dispositivos móveis */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.5em; /* Reduz o tamanho do título em telas menores */
-  }
-  .card {
-    width: 80px;
-    height: 120px;
-  }
-}
+ 
