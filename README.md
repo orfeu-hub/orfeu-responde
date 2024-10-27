@@ -25,5 +25,5 @@ Este projeto apresenta uma série de cartas interativas, cada uma representando 
 
 ## Deploy
 
-Este projeto está hosred em https://orfeu-hub.github.io/orfeu-responde, onde pode ser acedido e testado pela equipa.
+Este projeto está hosted em https://orfeu-hub.github.io/orfeu-responde, onde pode ser acedido e testado pela equipa.
 
