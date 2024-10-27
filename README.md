@@ -1,6 +1,3 @@
-# orfeu-responde
-Projeto de cartas interativas
-
 # Orfeu Responde
 
 Projeto de cartas interativas 
