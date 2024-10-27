@@ -1,0 +1,86 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Estilo do Título */
+h1 {
+  color: #f5f5f5;
+  font-size: 2em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Estilo das Cartas */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cartas por fila */
+  gap: 1em;
+  justify-items: center;
+}
+
+.card {
+  width: 100px;
+  height: 140px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #f5f5f5;
+}
+
+.card-front {
+  background-color: #2a3b5d; /* Azul escuro para o lado frontal */
+  font-size: 1.8em;
+}
+
+.card-back {
+  background-color: #1c2a44; /* Azul mais escuro para o verso */
+  transform: rotateY(180deg);
+  font-style: italic;
+  font-size: 0.8em; /* Fonte menor para o haiku */
+  padding: 10px;
+  text-align: center;
+  line-height: 1.4;
+}
