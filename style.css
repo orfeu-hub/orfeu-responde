@@ -33,7 +33,7 @@ h1 {
 }
 
 /* Cartas */
-/* Estilo das Cartas */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
