@@ -1,4 +1,4 @@
-// Array de haikus em português
+// Array de haikus 
 const haikus = [
   "Vento que passa,\na vida é uma dança,\nleve como o ar.",
   "Rios correm livres,\nsem pressa de chegar lá,\no destino é o fluir.",
@@ -15,19 +15,19 @@ const haikus = [
 // Variável para controlar se uma carta já foi escolhida
 let cardChosen = false;
 
-// Função para mostrar um haiku aleatório ao clicar
+// Função para mostrar um haiku aleatório 
 function showRandomHaiku(event) {
   if (cardChosen) return; // Se uma carta já foi escolhida, não faz nada
   cardChosen = true; // Marca como escolhido
 
-  // Seleciona um haiku aleatório
+  // random de haiku
   const randomHaiku = haikus[Math.floor(Math.random() * haikus.length)];
   
   // Encontra o elemento de texto no verso da carta
   const haikuBack = event.currentTarget.querySelector('.card-back');
   haikuBack.textContent = randomHaiku;
   
-  // Aplica a classe 'flip' para a carta virar
+  //   'flip' para a carta virar
   event.currentTarget.classList.add('flip');
   
   // Remove eventos de clique de todas as cartas
@@ -36,7 +36,7 @@ function showRandomHaiku(event) {
   });
 }
 
-// Adiciona evento de clique a cada carta
+//  evento clique a cada carta
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', showRandomHaiku);
 });
