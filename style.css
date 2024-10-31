@@ -81,7 +81,7 @@ h1 {
   background-color: #1c2a44; /* Azul mais escuro para o verso */
   transform: rotateY(180deg);
   font-style: italic;
-  font-size: 0.75em; /* Reduz o tamanho da fonte */
+  font-size: 0.6em; /* Reduz o tamanho da fonte */
   line-height: 1.2;
   overflow-wrap: break-word;
 }
