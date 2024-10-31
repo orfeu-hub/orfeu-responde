@@ -10,22 +10,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: #1e1e1e;
-  color: #f5f5f5;
+  color: #c0c0c0; /* Prateado */
 }
 
 .container {
   text-align: center;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
+  padding: 20px;
 }
 
 /* Título */
 h1 {
-  color:#c0c0c0;
-  font-family: 'Roboto Slab', serif;
-  font-size: 2em;
+  color: #c0c0c0; /* Prateado */
+  font-size: 1.8em;
   margin-bottom: 1em;
   font-weight: bold;
   text-transform: uppercase;
@@ -35,14 +35,14 @@ h1 {
 /* Cartas */
 .cards {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 cartas por linha */
-  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 10px;
   justify-items: center;
 }
 
 .card {
-  width: 100px;
-  height: 140px;
+  width: 80px;
+  height: 110px;
   perspective: 1000px;
   cursor: pointer;
 }
@@ -75,26 +75,31 @@ h1 {
 
 .card-front {
   background-color: #2a3b5d; /* Azul escuro para o lado frontal */
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 .card-back {
   background-color: #1c2a44; /* Azul mais escuro para o verso */
   transform: rotateY(180deg);
   font-style: italic;
-  font-size: 0.8em; /* Fonte para respostas */
+  font-size: 0.7em;
   line-height: 1.2;
   overflow-wrap: break-word;
 }
 
-/* Responsive */
+/* Responsivo para mobile */
 @media (max-width: 600px) {
-  .card {
-    width: 80px;
-    height: 120px;
+  .cards {
+    grid-template-columns: repeat(3, 1fr); /* Três colunas para caber na tela */
+    gap: 8px;
   }
-  .card-back {
-    font-size: 0.7em;
-    padding: 5px;
+
+  .card {
+    width: 70px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 1.5em;
   }
 }
