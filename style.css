@@ -23,8 +23,8 @@ body {
 
 /* Título */
 h1 {
+  color:#c0c0c0;
   font-family: 'Roboto Slab', serif;
-  color: #e5e5e5; 
   font-size: 2em;
   margin-bottom: 1em;
   font-weight: bold;
@@ -33,14 +33,12 @@ h1 {
 }
 
 /* Cartas */
-
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-columns: repeat(6, 1fr); /* 6 cartas por linha */
   gap: 1em;
-  justify-content: center; /* Alinha as cartas no centro */
+  justify-items: center;
 }
-
 
 .card {
   width: 100px;
@@ -89,7 +87,7 @@ h1 {
   overflow-wrap: break-word;
 }
 
-/* Responsivo */
+/* Responsive */
 @media (max-width: 600px) {
   .card {
     width: 80px;
