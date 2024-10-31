@@ -35,7 +35,7 @@ h1 {
 /* Cartas */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Três cartas por linha */
   gap: 10px;
   justify-items: center;
 }
@@ -87,10 +87,10 @@ h1 {
   overflow-wrap: break-word;
 }
 
-/* Responsivo para mobile */
+/*  mobile */
 @media (max-width: 600px) {
   .cards {
-    grid-template-columns: repeat(3, 1fr); /* Três colunas para caber na tela */
+    grid-template-columns: repeat(3, 1fr); /* Garante 3 colunas em mobile */
     gap: 8px;
   }
 
