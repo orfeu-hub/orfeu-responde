@@ -33,13 +33,14 @@ h1 {
 }
 
 /* Cartas */
+/* Estilo das Cartas */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 1em;
-  justify-items: center;
-  justify-content: center; /* Centraliza as cartas */
+  justify-content: center; /* Alinha as cartas no centro */
 }
+
 
 .card {
   width: 100px;
