@@ -12,7 +12,7 @@ const haikus = [
   "No reflexo d'água,\nvejo o mundo invertido,\nverdade oculta."
 ];
 
-// Variável para controlar se uma carta já foi escolhida
+// saber se uma carta já foi escolhida
 let cardChosen = false;
 
 // Função para mostrar um haiku aleatório 
