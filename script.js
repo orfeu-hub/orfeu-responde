@@ -1,15 +1,15 @@
 // Array de haikus 
 const haikus = [
-  "Vento que passa,\na vida é uma dança,\nleve como o ar.",
-  "Rios correm livres,\nsem pressa de chegar lá,\no destino é o fluir.",
-  "Folhas caem no chão,\nciclos que se renovam,\nvida em movimento.",
-  "No silêncio, paz,\nouço o pulsar do mundo,\nsou parte de tudo.",
-  "Sol nasce e se põe,\ntempo que não volta mais,\nabraça o presente.",
-  "Caminho incerto,\npasso a passo vou em frente,\nsou viajante.",
-  "Árvore frondosa,\nraízes firmes no chão,\na vida se expande.",
-  "Mar infinito,\nas ondas vêm e vão só,\naceita o agora.",
-  "Flor que desabrocha,\nbeleza tão passageira,\nvive sem temor.",
-  "No reflexo d'água,\nvejo o mundo invertido,\nverdade oculta."
+  "Vento que passa,\na dança da vida,\nleve como ar.",
+  "Rios correm livres,\no destino é fluir,\nsó o momento.",
+  "Folhas no chão,\nciclo que se renova,\no mover da vida.",
+  "No silêncio,\npulsar do mundo,\nsou parte do todo.",
+  "Sol nasce e se põe,\no tempo é fugaz,\nabraça o agora.",
+  "Caminho incerto,\num passo por vez,\nsou viajante.",
+  "Árvore firme,\nraízes profundas,\na vida cresce.",
+  "Mar infinito,\nondas vêm e vão,\naceita o agora.",
+  "Flor desabrocha,\nbeleza breve,\nsem temor.",
+  "Na água vejo,\num mundo ao avesso,\na verdade."
 ];
 
 // saber se uma carta já foi escolhida
