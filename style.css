@@ -1,4 +1,4 @@
-/* Reset  */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -21,23 +21,24 @@ body {
   max-width: 600px;
 }
 
-/*  Título */
+/* Título */
 h1 {
-  color: #d4af37; 
+  font-family: 'Roboto Slab', serif;
+  color: #e5e5e5; 
   font-size: 2em;
   margin-bottom: 1em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-align: center;
 }
 
-/*  Cartas */
+/* Cartas */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 1em;
   justify-items: center;
+  justify-content: center; /* Centraliza as cartas */
 }
 
 .card {
