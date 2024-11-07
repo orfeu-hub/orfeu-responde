@@ -1,4 +1,4 @@
-
+// Array de haikus
 const haikus = [
   "Vento que passa,\na dança da vida,\nleve como ar.",
   "Rios correm livres,\no destino é fluir,\nsó o momento.",
@@ -12,10 +12,10 @@ const haikus = [
   "Na água vejo,\num mundo ao avesso,\na verdade."
 ];
 
-//  verificar se uma carta já foi escolhida
+// Variável para verificar se uma carta já foi escolhida
 let cardChosen = false;
 
-// mostrar um haiku aleatório ao clicar
+// Função para mostrar um haiku aleatório ao clicar
 function showRandomHaiku(event) {
   if (cardChosen) return; // Se uma carta já foi escolhida, não faz nada
   cardChosen = true; // Marca como escolhido
@@ -23,19 +23,19 @@ function showRandomHaiku(event) {
   // Selecciona um haiku aleatório
   const randomHaiku = haikus[Math.floor(Math.random() * haikus.length)];
 
-  // mostra o haiku no pop-up
+  // Exibe o haiku no pop-up
   showPopup(randomHaiku);
 
-  // 'flip' para a carta virar
+  // Aplica a classe 'flip' para a carta virar
   event.currentTarget.classList.add('flip');
 
-  // Remove  clique de todas as cartas
+  // Remove eventos de clique de todas as cartas
   document.querySelectorAll('.card').forEach(card => {
     card.removeEventListener('click', showRandomHaiku);
   });
 }
 
-//  clique de cada carta
+// Adiciona evento de clique a cada carta
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', showRandomHaiku);
 });
@@ -45,13 +45,13 @@ const popup = document.getElementById("popup");
 const popupText = document.getElementById("popup-text");
 const popupClose = document.getElementById("popup-close");
 
-//  mostra o pop-up com o haiku
+// Função para mostrar o pop-up com o haiku
 function showPopup(text) {
   popupText.textContent = text; // Insere o haiku no pop-up
-  popup.style.display = "flex"; // mostra o pop-up
+  popup.style.display = "flex"; // Exibe o pop-up
 }
 
-//  fechar o pop-up
+// Evento de clique para fechar o pop-up
 popupClose.addEventListener("click", () => {
   popup.style.display = "none";
   cardChosen = false; // Permite escolher outra carta ao fechar o pop-up
