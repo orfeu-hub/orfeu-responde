@@ -54,5 +54,5 @@ function showPopup(text) {
 // fechar o pop-up
 popupClose.addEventListener("click", () => {
   popup.style.display = "none";
-  cardChosen = true; // Permite escolher outra carta ao fechar o pop-up
+  cardChosen = false; // escolher outra carta ao fechar o pop-up
 });
