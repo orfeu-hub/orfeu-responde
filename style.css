@@ -86,7 +86,7 @@ h1 {
   overflow-wrap: break-word;
 }
 
-/* Estilo do Pop-up */
+/*Pop-up */
 .popup {
   display: none;
   position: fixed;
