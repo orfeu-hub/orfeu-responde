@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Menlo', monospace;
+  font-family: 'Roboto Slab', serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@ body {
 
 /* Título */
 h1 {
-  color: #c0c0c0; 
+  color: #cccccc;
   font-size: 2em;
   margin-bottom: 1em;
   font-weight: bold;
@@ -31,17 +31,17 @@ h1 {
   letter-spacing: 1px;
 }
 
-/*  Cartas */
+/* Cartas */
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cartas por linha para mobile */
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 1em;
   justify-items: center;
 }
 
 .card {
-  width: 80px;
-  height: 120px;
+  width: 100px;
+  height: 140px;
   perspective: 1000px;
   cursor: pointer;
 }
@@ -73,62 +73,64 @@ h1 {
 }
 
 .card-front {
-  background-color: #2a3b5d; /* Azul escuro para o lado frontal */
+  background-color: #2a3b5d;
   font-size: 1.8em;
 }
 
 .card-back {
-  background-color: #1c2a44; /* Azul mais escuro para o verso */
+  background-color: #1c2a44;
   transform: rotateY(180deg);
   font-style: italic;
-  font-size: 0.5em; /* Reduz o tamanho da fonte */
+  font-size: 0.8em;
   line-height: 1.2;
   overflow-wrap: break-word;
 }
 
-/* mobile */
-@media (max-width: 600px) {
-  .card {
-    width: 70px; 
-    height: 100px;
-  }
-  
-  .card-back {
-    font-size: 0.7em; 
-    padding: 5px;
-  }
-
-
+/*  Pop-up */
 .popup {
-  display: none; 
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+  background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
-  z-index: 1000;
 }
 
 .popup-content {
-  background-color: #1c2a44; /* Fundo azul escuro */
+  background: #2a3b5d;
   padding: 20px;
   border-radius: 10px;
-  max-width: 80%;
-  color: #f5f5f5;
+  width: 80%;
+  max-width: 300px;
   text-align: center;
+}
+
+.popup-text {
+  color: #f5f5f5;
   font-size: 1em;
+  line-height: 1.4;
 }
 
 .popup-close {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 15px;
+  color: #f5f5f5;
   font-size: 1.5em;
   cursor: pointer;
-  color: #f5f5f5;
 }
 
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    width: 80px;
+    height: 120px;
+  }
+  .card-back {
+    font-size: 0.7em;
+    padding: 5px;
+  }
 }
