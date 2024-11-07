@@ -1,4 +1,4 @@
-// Array de haikus
+
 const haikus = [
   "Vento que passa,\na dança da vida,\nleve como ar.",
   "Rios correm livres,\no destino é fluir,\nsó o momento.",
@@ -12,34 +12,30 @@ const haikus = [
   "Na água vejo,\num mundo ao avesso,\na verdade."
 ];
 
-// ver se uma carta já foi escolhida
+//  verificar se uma carta já foi escolhida
 let cardChosen = false;
 
-//  mostrar um haiku aleatório ao clicar
+// mostrar um haiku aleatório ao clicar
 function showRandomHaiku(event) {
   if (cardChosen) return; // Se uma carta já foi escolhida, não faz nada
   cardChosen = true; // Marca como escolhido
 
-  // Seleciona um haiku aleatório
+  // Selecciona um haiku aleatório
   const randomHaiku = haikus[Math.floor(Math.random() * haikus.length)];
-  
-  // Encontra o texto no verso da carta
-  const haikuBack = event.currentTarget.querySelector('.card-back');
-  haikuBack.textContent = randomHaiku;
 
-  //  para a carta virar
-  event.currentTarget.classList.add('flip');
-  
   // mostra o haiku no pop-up
   showPopup(randomHaiku);
 
-  // Remove o clique de todas as cartas
+  // 'flip' para a carta virar
+  event.currentTarget.classList.add('flip');
+
+  // Remove  clique de todas as cartas
   document.querySelectorAll('.card').forEach(card => {
     card.removeEventListener('click', showRandomHaiku);
   });
 }
 
-//  clique a cada carta
+//  clique de cada carta
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', showRandomHaiku);
 });
@@ -49,12 +45,14 @@ const popup = document.getElementById("popup");
 const popupText = document.getElementById("popup-text");
 const popupClose = document.getElementById("popup-close");
 
-//  mostrar o pop-up com o haiku
+//  mostra o pop-up com o haiku
 function showPopup(text) {
   popupText.textContent = text; // Insere o haiku no pop-up
-  popup.style.display = "flex"; // Exibe o pop-up
+  popup.style.display = "flex"; // mostra o pop-up
 }
 
-// clique para fechar o pop-up
+//  fechar o pop-up
 popupClose.addEventListener("click", () => {
-  popup.style.display = "
+  popup.style.display = "none";
+  cardChosen = false; // Permite escolher outra carta ao fechar o pop-up
+});
