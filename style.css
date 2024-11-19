@@ -31,6 +31,16 @@ h1 {
   letter-spacing: 1px;
 }
 
+/* Responsivo */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em; /* Reduz o tamanho da fonte para ecrãs mais pequenos */
+    margin-bottom: 1em;
+  }
+}
+
+
+
 /* Cartas */
 .cards {
   display: grid;
