@@ -36,12 +36,13 @@ h1 {
   text-align: center;
 }
 
-/* Cartas */
 .cards {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 colunas */
-  gap: 1em; /* Espaço entre as cartas */
-  justify-items: center;
+  grid-template-columns: repeat(6, 1fr); 
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1em; 
+  justify-items: center; 
+  align-items: center;
 }
 
 .card {
