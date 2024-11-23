@@ -129,24 +129,21 @@ h1 {
   font-size: 1.5em;
   cursor: pointer;
 }
-
-/* Responsividade */
+/* Responsividade para Mobile */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.5em;
-  }
-
   .cards {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(4, 1fr); 
+    gap: 0.5em; 
   }
 
   .card {
-    width: 70px;
-    height: 100px;
+    width: 60px;
+    height: 90px;
   }
 
-  .card-back {
-    font-size: 0.7em;
-    padding: 5px;
+  h1 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
   }
 }
