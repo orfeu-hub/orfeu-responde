@@ -134,16 +134,18 @@ h1 {
   .cards {
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(4, 1fr); 
-    gap: 0.5em; 
+    gap: 0.8em; 
+    justify-items: center;
+    align-items: center; 
   }
 
   .card {
-    width: 60px;
+    width: 60px; 
     height: 90px;
   }
 
   h1 {
     font-size: 1.2em;
-    margin-bottom: 1em;
+    margin-bottom: 1em; 
   }
 }
